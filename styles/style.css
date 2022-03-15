@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  color: #333;
+  background: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* LAYOUT */
+.main {
+  display: flex;
+  position: relative;
+  width: 100rem;
+  height: 60rem;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(20rem);
+  filter: blur();
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  border-radius: 0.9rem;
+  overflow: hidden;
+}
+.player {
+  flex: 50%;
+  padding: 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.75s ease;
+}
+.player__active {
+  background: rgba(255, 255, 255, 0.4);
+}
+.player__active .name {
+  font-weight: 700;
+}
+.player__active .score {
+  font-weight: 400;
+}
+.player__active .current {
+  opacity: 1;
+}
+.player__winner {
+  background: #2f2f2f;
+}
+.player__winner .name {
+  font-weight: 700;
+  color: #c7365f;
+}
+/* ELEMENTS */
+.name {
+  position: relative;
+  font-size: 4rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.2rem;
+  margin-bottom: 1rem;
+}
+.score {
+  font-size: 8rem;
+  font-weight: 300;
+  color: #c7365f;
+  margin-bottom: auto;
+}
+.current {
+  background: #c7365f;
+  color: #fff;
+  opacity: 0.8;
+  border-radius: 0.9rem;
+  width: 65%;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.75s ease;
+}
+.current__label {
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  color: #ddd;
+  margin-bottom: 1rem;
+}
+.current__score {
+  font-size: 3.5rem;
+}
+
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #444;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(1rem);
+
+  padding: 0.7rem 2.5rem;
+}
+.btn::first-letter {
+  font-size: 2.4rem;
+  display: inline-block;
+  margin-bottom: 0.7rem;
+}
+.btn:active {
+  transform: translate(-50%, 0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+.btn:focus {
+  outline: none;
+}
+.btn__new {
+  top: 4rem;
+}
+.btn__roll {
+  top: 39.3rem;
+}
+.btn__hold {
+  top: 46.1rem;
+}
+.dice {
+  position: absolute;
+  left: 50%;
+  top: 16.5rem;
+  transform: translateX(-50%);
+  height: 10rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
